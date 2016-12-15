@@ -1,0 +1,44 @@
+c:\users\hanna\documents\visual studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\bin\Debug\АМИС ПОЛИКЛИНИКА.exe.config
+c:\users\hanna\documents\visual studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\bin\Debug\АМИС ПОЛИКЛИНИКА.exe
+c:\users\hanna\documents\visual studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\bin\Debug\АМИС ПОЛИКЛИНИКА.pdb
+c:\users\hanna\documents\visual studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС ПОЛИКЛИНИКА.csprojResolveAssemblyReference.cache
+c:\users\hanna\documents\visual studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.Properties.Resources.resources
+c:\users\hanna\documents\visual studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС ПОЛИКЛИНИКА.csproj.GenerateResource.Cache
+c:\users\hanna\documents\visual studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС ПОЛИКЛИНИКА.exe
+c:\users\hanna\documents\visual studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС ПОЛИКЛИНИКА.pdb
+c:\users\hanna\documents\visual studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.Doctor.resources
+c:\users\hanna\documents\visual studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.Main.resources
+c:\users\hanna\documents\visual studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.Registr.resources
+c:\users\hanna\documents\visual studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.Book.resources
+c:\users\hanna\documents\visual studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.DocReg.resources
+c:\users\hanna\documents\visual studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.Record.resources
+c:\users\hanna\documents\visual studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.RegPatient.resources
+c:\users\hanna\documents\visual studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.MedExam.resources
+c:\Users\HANNA\Documents\University\C#\в1.доБД\АМИС ПОЛИКЛИНИКА\bin\Debug\АМИС ПОЛИКЛИНИКА.exe.config
+c:\Users\HANNA\Documents\University\C#\в1.доБД\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС ПОЛИКЛИНИКА.exe
+c:\Users\HANNA\Documents\University\C#\в1.доБД\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС ПОЛИКЛИНИКА.pdb
+c:\Users\HANNA\Documents\University\C#\в1.доБД\АМИС ПОЛИКЛИНИКА\bin\Debug\Clinic.mdf
+c:\Users\HANNA\Documents\University\C#\в1.доБД\АМИС ПОЛИКЛИНИКА\bin\Debug\Clinic_log.ldf
+c:\Users\HANNA\Documents\University\C#\в1.доБД\АМИС ПОЛИКЛИНИКА\bin\Debug\АМИС ПОЛИКЛИНИКА.exe
+c:\Users\HANNA\Documents\University\C#\в1.доБД\АМИС ПОЛИКЛИНИКА\bin\Debug\АМИС ПОЛИКЛИНИКА.pdb
+c:\Users\HANNA\Documents\University\C#\в1.доБД\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС ПОЛИКЛИНИКА.csprojResolveAssemblyReference.cache
+c:\Users\HANNA\Documents\University\C#\в1.доБД\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.Book.resources
+c:\Users\HANNA\Documents\University\C#\в1.доБД\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.Doctor.resources
+c:\Users\HANNA\Documents\University\C#\в1.доБД\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.Main.resources
+c:\Users\HANNA\Documents\University\C#\в1.доБД\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.MedExam.resources
+c:\Users\HANNA\Documents\University\C#\в1.доБД\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.Properties.Resources.resources
+c:\Users\HANNA\Documents\University\C#\в1.доБД\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.DocReg.resources
+c:\Users\HANNA\Documents\University\C#\в1.доБД\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.Record.resources
+c:\Users\HANNA\Documents\University\C#\в1.доБД\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.Registr.resources
+c:\Users\HANNA\Documents\University\C#\в1.доБД\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.RegPatient.resources
+c:\Users\HANNA\Documents\University\C#\в1.доБД\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС ПОЛИКЛИНИКА.csproj.GenerateResource.Cache
+c:\Users\HANNA\Documents\University\C#\в1.доБД\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.test.resources
+c:\Users\HANNA\Documents\Visual Studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\bin\Debug\Clinic.mdf
+c:\Users\HANNA\Documents\Visual Studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\bin\Debug\Clinic_log.ldf
+c:\Users\HANNA\Documents\Visual Studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.test.resources
+C:\Users\HANNA\documents\visual studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.ShowList.resources
+C:\Users\HANNA\Documents\Visual Studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\bin\Debug\Domain.dll
+C:\Users\HANNA\Documents\Visual Studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\bin\Debug\Session.dll
+C:\Users\HANNA\Documents\Visual Studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\bin\Debug\Domain.pdb
+C:\Users\HANNA\Documents\Visual Studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\bin\Debug\Session.pdb
+c:\Users\HANNA\Documents\Visual Studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.Ticket.resources
