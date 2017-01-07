@@ -17,10 +17,6 @@ namespace АМИС_ПОЛИКЛИНИКА
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
 
         private void ShowList_Load(object sender, EventArgs e)
         {
@@ -48,6 +44,21 @@ namespace АМИС_ПОЛИКЛИНИКА
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void doctorComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

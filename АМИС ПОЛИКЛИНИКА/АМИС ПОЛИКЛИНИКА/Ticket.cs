@@ -21,6 +21,9 @@ namespace АМИС_ПОЛИКЛИНИКА
         {
             InitializeComponent();
 
+            textBox1.MaxLength = 2;
+            textBox2.MaxLength = 2;
+
         }
 
         private void doctorBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -40,11 +43,6 @@ namespace АМИС_ПОЛИКЛИНИКА
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            CaptureScreen();
-            printDocument1.Print();
-        }
 
         Bitmap memoryImage;
 
@@ -62,5 +60,39 @@ namespace АМИС_ПОЛИКЛИНИКА
         {
             e.Graphics.DrawImage(memoryImage, 0, 0);
         }
+
+        private void print_Click(object sender, EventArgs e)
+        {
+            CaptureScreen();
+            printDocument1.Print();
+        }
+
+        
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void textbox1_keypress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+
+            if (!Char.IsDigit(number))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textbox2_keypress(object sender, KeyPressEventArgs e)
+        {
+            char number = e.KeyChar;
+
+            if (!Char.IsDigit(number))
+            {
+                e.Handled = true;
+            }
+        }
     }
+    
 }

@@ -35,7 +35,6 @@ c:\Users\HANNA\Documents\University\C#\в1.доБД\АМИС ПОЛИКЛИНИ�
 c:\Users\HANNA\Documents\University\C#\в1.доБД\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.test.resources
 c:\Users\HANNA\Documents\Visual Studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\bin\Debug\Clinic.mdf
 c:\Users\HANNA\Documents\Visual Studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\bin\Debug\Clinic_log.ldf
-c:\Users\HANNA\Documents\Visual Studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.test.resources
 C:\Users\HANNA\documents\visual studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\obj\Debug\АМИС_ПОЛИКЛИНИКА.ShowList.resources
 C:\Users\HANNA\Documents\Visual Studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\bin\Debug\Domain.dll
 C:\Users\HANNA\Documents\Visual Studio 2015\Projects\АМИС ПОЛИКЛИНИКА\АМИС ПОЛИКЛИНИКА\bin\Debug\Session.dll

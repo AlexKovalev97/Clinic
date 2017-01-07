@@ -66,11 +66,6 @@ namespace АМИС_ПОЛИКЛИНИКА
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             long tick = DateTime.Now.Ticks - date.Ticks;
@@ -80,6 +75,9 @@ namespace АМИС_ПОЛИКЛИНИКА
             timeLabel.Text = String.Format("{0:HH:mm:ss}", StopWatch);
         }
 
-        
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

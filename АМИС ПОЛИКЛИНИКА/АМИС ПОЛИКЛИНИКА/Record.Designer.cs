@@ -32,10 +32,8 @@
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label2;
             System.Windows.Forms.Label idLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Record));
             System.Windows.Forms.Label label3;
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Record));
             this.doctorDataGridView = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +66,12 @@
             this.fKPatientAddrListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.addrListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.doctorComboBox = new System.Windows.Forms.ComboBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.doctorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.exit = new System.Windows.Forms.Button();
+            this.getTicket = new System.Windows.Forms.Button();
+            this.getTick = new System.Windows.Forms.Button();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
@@ -83,6 +87,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.fKPatientAddrListBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addrListBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -118,35 +123,16 @@
             idLabel.TabIndex = 22;
             idLabel.Text = "id врача:";
             // 
-            // button2
+            // label3
             // 
-            this.button2.BackColor = System.Drawing.Color.SeaGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(24, 412);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(222, 38);
-            this.button2.TabIndex = 48;
-            this.button2.Text = "Выход";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(426, 412);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(222, 38);
-            this.button1.TabIndex = 46;
-            this.button1.Text = "Выдать талон";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            label3.ForeColor = System.Drawing.Color.SeaGreen;
+            label3.Location = new System.Drawing.Point(35, 77);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(146, 25);
+            label3.TabIndex = 65;
+            label3.Text = "Выбор врача:";
             // 
             // doctorDataGridView
             // 
@@ -393,6 +379,7 @@
             this.patientComboBox.Size = new System.Drawing.Size(266, 28);
             this.patientComboBox.TabIndex = 64;
             this.patientComboBox.ValueMember = "id";
+            this.patientComboBox.SelectedIndexChanged += new System.EventHandler(this.patientComboBox_SelectedIndexChanged);
             // 
             // fKPatientAddrListBindingSource
             // 
@@ -404,20 +391,10 @@
             this.addrListBindingSource.DataMember = "AddrList";
             this.addrListBindingSource.DataSource = this.clinicDataSet;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            label3.ForeColor = System.Drawing.Color.SeaGreen;
-            label3.Location = new System.Drawing.Point(35, 77);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(146, 25);
-            label3.TabIndex = 65;
-            label3.Text = "Выбор врача:";
-            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.doctorComboBox);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.patientBindingNavigator);
             this.panel2.Controls.Add(label1);
@@ -427,15 +404,76 @@
             this.panel2.Size = new System.Drawing.Size(624, 293);
             this.panel2.TabIndex = 65;
             // 
+            // doctorComboBox
+            // 
+            this.doctorComboBox.DataSource = this.doctorBindingSource;
+            this.doctorComboBox.DisplayMember = "spec";
+            this.doctorComboBox.FormattingEnabled = true;
+            this.doctorComboBox.Location = new System.Drawing.Point(429, 92);
+            this.doctorComboBox.Name = "doctorComboBox";
+            this.doctorComboBox.Size = new System.Drawing.Size(178, 24);
+            this.doctorComboBox.TabIndex = 49;
+            this.doctorComboBox.ValueMember = "id";
+            // 
+            // doctorBindingSource1
+            // 
+            this.doctorBindingSource1.DataMember = "Doctor";
+            this.doctorBindingSource1.DataSource = this.clinicDataSet;
+            // 
+            // exit
+            // 
+            this.exit.BackColor = System.Drawing.Color.SeaGreen;
+            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.exit.ForeColor = System.Drawing.SystemColors.Window;
+            this.exit.Location = new System.Drawing.Point(24, 412);
+            this.exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(222, 38);
+            this.exit.TabIndex = 66;
+            this.exit.Text = "Выход";
+            this.exit.UseVisualStyleBackColor = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
+            // getTicket
+            // 
+            this.getTicket.BackColor = System.Drawing.Color.SeaGreen;
+            this.getTicket.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.getTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.getTicket.ForeColor = System.Drawing.SystemColors.Window;
+            this.getTicket.Location = new System.Drawing.Point(426, 412);
+            this.getTicket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.getTicket.Name = "getTicket";
+            this.getTicket.Size = new System.Drawing.Size(222, 38);
+            this.getTicket.TabIndex = 67;
+            this.getTicket.Text = "Выдать талон";
+            this.getTicket.UseVisualStyleBackColor = false;
+            //this.getTicket.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // getTick
+            // 
+            this.getTick.BackColor = System.Drawing.Color.SeaGreen;
+            this.getTick.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.getTick.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.getTick.ForeColor = System.Drawing.SystemColors.Window;
+            this.getTick.Location = new System.Drawing.Point(426, 412);
+            this.getTick.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.getTick.Name = "getTick";
+            this.getTick.Size = new System.Drawing.Size(222, 38);
+            this.getTick.TabIndex = 68;
+            this.getTick.Text = "Выдать талон";
+            this.getTick.UseVisualStyleBackColor = false;
+            this.getTick.Click += new System.EventHandler(this.getTick_Click);
+            // 
             // Record
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(674, 461);
+            this.ClientSize = new System.Drawing.Size(668, 461);
+            this.Controls.Add(this.getTick);
+            this.Controls.Add(this.exit);
             this.Controls.Add(label3);
             this.Controls.Add(this.patientComboBox);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(label2);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -458,15 +496,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.addrListBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.doctorBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView doctorDataGridView;
         private System.Windows.Forms.Panel panel1;
         private ClinicDataSet clinicDataSet;
@@ -499,5 +535,12 @@
         private System.Windows.Forms.BindingSource addrListBindingSource;
         private System.Windows.Forms.BindingSource fKPatientAddrListBindingSource;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ComboBox doctorComboBox;
+        private System.Windows.Forms.BindingSource doctorBindingSource1;
+        private System.Windows.Forms.Button exit;
+        //private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button getTicket;
+        private System.Windows.Forms.Button getTick;
     }
 }

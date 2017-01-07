@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Book));
-            this.button1 = new System.Windows.Forms.Button();
             this.clinicDataSet = new АМИС_ПОЛИКЛИНИКА.ClinicDataSet();
             this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bookTableAdapter = new АМИС_ПОЛИКЛИНИКА.ClinicDataSetTableAdapters.BookTableAdapter();
@@ -52,27 +51,14 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.exit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.clinicDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingNavigator)).BeginInit();
             this.bookBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(592, 394);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 38);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Выход";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // clinicDataSet
             // 
@@ -236,16 +222,17 @@
             this.bookDataGridView.Location = new System.Drawing.Point(12, 32);
             this.bookDataGridView.Name = "bookDataGridView";
             this.bookDataGridView.RowTemplate.Height = 24;
-            this.bookDataGridView.Size = new System.Drawing.Size(543, 377);
+            this.bookDataGridView.Size = new System.Drawing.Size(593, 356);
             this.bookDataGridView.TabIndex = 35;
             this.bookDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bookDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id";
+            this.dataGridViewTextBoxColumn1.FillWeight = 50F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "№";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Visible = false;
+            this.dataGridViewTextBoxColumn1.Width = 50;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -263,14 +250,29 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.Width = 300;
             // 
+            // exit
+            // 
+            this.exit.BackColor = System.Drawing.Color.SeaGreen;
+            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.exit.ForeColor = System.Drawing.SystemColors.Window;
+            this.exit.Location = new System.Drawing.Point(600, 404);
+            this.exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(124, 38);
+            this.exit.TabIndex = 36;
+            this.exit.Text = "Выход";
+            this.exit.UseVisualStyleBackColor = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
             // Book
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 453);
+            this.Controls.Add(this.exit);
             this.Controls.Add(this.bookDataGridView);
             this.Controls.Add(this.bookBindingNavigator);
-            this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Book";
@@ -289,8 +291,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private ClinicDataSet clinicDataSet;
         private System.Windows.Forms.BindingSource bookBindingSource;
         private ClinicDataSetTableAdapters.BookTableAdapter bookTableAdapter;
@@ -309,8 +309,10 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton bookBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView bookDataGridView;
+        private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.Button exit;
     }
 }

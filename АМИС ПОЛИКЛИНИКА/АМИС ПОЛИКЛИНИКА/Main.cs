@@ -17,20 +17,18 @@ namespace АМИС_ПОЛИКЛИНИКА
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void registrator_Click(object sender, EventArgs e)
         {
             Registr f = new Registr();
             f.Show();
-            Hide();
-           
+            //Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void doctor_Click(object sender, EventArgs e)
         {
             Doctor f = new Doctor();
             f.Show();
-            Hide();
-            
+            //Hide();
         }
     }
 }

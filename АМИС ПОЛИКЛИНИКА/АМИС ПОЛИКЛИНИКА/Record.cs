@@ -15,6 +15,14 @@ namespace АМИС_ПОЛИКЛИНИКА
         public Record()
         {
             InitializeComponent();
+
+           
+
+            toolTip1.SetToolTip(exit, "Не забудьте сохранить изменения!");
+            toolTip1.IsBalloon = true;
+
+            toolTip1.SetToolTip(getTicket, "Не забудьте сохранить изменения!");
+            toolTip1.IsBalloon = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -41,12 +49,27 @@ namespace АМИС_ПОЛИКЛИНИКА
 
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        
+        private void getTicket_Click(object sender, EventArgs e)
+        {
+            Ticket f = new Ticket();
+            f.Show();
+            Close();
+        }
+
+        private void patientComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void exit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+       
+
+        private void getTick_Click(object sender, EventArgs e)
         {
             Ticket f = new Ticket();
             f.Show();

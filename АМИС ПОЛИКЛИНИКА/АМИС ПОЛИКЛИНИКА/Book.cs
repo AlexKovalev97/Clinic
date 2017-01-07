@@ -15,11 +15,11 @@ namespace АМИС_ПОЛИКЛИНИКА
         public Book()
         {
             InitializeComponent();
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
+            toolTip1.SetToolTip(exit, "Не забудьте сохранить изменения!");
+            toolTip1.IsBalloon = true;
+
+            
         }
 
         private void bookBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -39,36 +39,14 @@ namespace АМИС_ПОЛИКЛИНИКА
 
         private void bookDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
-                this.Validate();
-                this.bookBindingSource.EndEdit();
-                this.bookTableAdapter.Update(this.clinicDataSet.Book);
-                //данные сохраняются только в течение сессии
-                MessageBox.Show(" Изменения внесены успешно!");
-            }
-
-            catch (System.Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+           
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.Validate();
-                this.bookBindingSource.EndEdit();
-                this.bookTableAdapter.Update(this.clinicDataSet.Book);
-                //данные сохраняются только в течение сессии
-                MessageBox.Show(" Изменения внесены успешно!");
-            }
+       
 
-            catch (System.Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

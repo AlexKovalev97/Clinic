@@ -16,13 +16,11 @@ namespace АМИС_ПОЛИКЛИНИКА
         public RegPatient()
         {
             InitializeComponent();
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
+            toolTip1.SetToolTip(exit, "Не забудьте сохранить изменения!");
+            toolTip1.IsBalloon = true;
         }
-
+        
         private void RegPatient_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "clinicDataSet.AddrList". При необходимости она может быть перемещена или удалена.
@@ -42,6 +40,11 @@ namespace АМИС_ПОЛИКЛИНИКА
             this.patientBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.clinicDataSet);
 
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

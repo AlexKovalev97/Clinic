@@ -20,6 +20,8 @@ namespace АМИС_ПОЛИКЛИНИКА
         {
             InitializeComponent();
 
+            
+
             infoLabel = new ToolStripLabel();
             infoLabel.Text = "Время в системе:";
 
@@ -63,10 +65,7 @@ namespace АМИС_ПОЛИКЛИНИКА
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+        
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -75,6 +74,11 @@ namespace АМИС_ПОЛИКЛИНИКА
             StopWatch = StopWatch.AddTicks(tick);
 
             timeLabel.Text = String.Format("{0:HH:mm:ss}", StopWatch);
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

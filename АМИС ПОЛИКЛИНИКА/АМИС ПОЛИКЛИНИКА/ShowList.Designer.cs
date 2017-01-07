@@ -40,12 +40,12 @@
             this.drDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cardidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.docidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fKPatientDoctorBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.fKPatientDoctorBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.doctorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clinicDataSet = new АМИС_ПОЛИКЛИНИКА.ClinicDataSet();
+            this.fKPatientDoctorBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.fKPatientDoctorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.fKPatientDoctorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.patientTableAdapter = new АМИС_ПОЛИКЛИНИКА.ClinicDataSetTableAdapters.PatientTableAdapter();
             this.tableAdapterManager = new АМИС_ПОЛИКЛИНИКА.ClinicDataSetTableAdapters.TableAdapterManager();
@@ -62,11 +62,12 @@
             this.fKPatientCardBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.fKPatientCardBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.fKPatientCardBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.fKPatientDoctorBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.exit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKPatientDoctorBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKPatientDoctorBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clinicDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKPatientDoctorBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKPatientDoctorBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKPatientDoctorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
@@ -78,7 +79,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.fKPatientCardBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKPatientCardBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKPatientCardBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKPatientDoctorBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -102,6 +102,7 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(533, 248);
             this.dataGridView1.TabIndex = 28;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -160,10 +161,10 @@
             this.docidDataGridViewTextBoxColumn.Name = "docidDataGridViewTextBoxColumn";
             this.docidDataGridViewTextBoxColumn.Visible = false;
             // 
-            // fKPatientDoctorBindingSource3
+            // fKPatientDoctorBindingSource4
             // 
-            this.fKPatientDoctorBindingSource3.DataMember = "FK_Patient_Doctor";
-            this.fKPatientDoctorBindingSource3.DataSource = this.doctorBindingSource;
+            this.fKPatientDoctorBindingSource4.DataMember = "FK_Patient_Doctor";
+            this.fKPatientDoctorBindingSource4.DataSource = this.doctorBindingSource;
             // 
             // doctorBindingSource
             // 
@@ -175,6 +176,11 @@
             this.clinicDataSet.DataSetName = "ClinicDataSet";
             this.clinicDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // fKPatientDoctorBindingSource3
+            // 
+            this.fKPatientDoctorBindingSource3.DataMember = "FK_Patient_Doctor";
+            this.fKPatientDoctorBindingSource3.DataSource = this.doctorBindingSource;
+            // 
             // fKPatientDoctorBindingSource1
             // 
             this.fKPatientDoctorBindingSource1.DataMember = "FK_Patient_Doctor";
@@ -184,21 +190,6 @@
             // 
             this.fKPatientDoctorBindingSource.DataMember = "FK_Patient_Doctor";
             this.fKPatientDoctorBindingSource.DataSource = this.doctorBindingSource;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(436, 430);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 38);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "Выход";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // patientBindingSource
             // 
@@ -239,6 +230,7 @@
             this.doctorComboBox.Size = new System.Drawing.Size(300, 33);
             this.doctorComboBox.TabIndex = 35;
             this.doctorComboBox.ValueMember = "id";
+            this.doctorComboBox.SelectedIndexChanged += new System.EventHandler(this.doctorComboBox_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -301,20 +293,30 @@
             this.fKPatientCardBindingSource3.DataMember = "FK_Patient_Card";
             this.fKPatientCardBindingSource3.DataSource = this.cardBindingSource;
             // 
-            // fKPatientDoctorBindingSource4
+            // exit
             // 
-            this.fKPatientDoctorBindingSource4.DataMember = "FK_Patient_Doctor";
-            this.fKPatientDoctorBindingSource4.DataSource = this.doctorBindingSource;
+            this.exit.BackColor = System.Drawing.Color.SeaGreen;
+            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.exit.ForeColor = System.Drawing.SystemColors.Window;
+            this.exit.Location = new System.Drawing.Point(436, 430);
+            this.exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(124, 38);
+            this.exit.TabIndex = 38;
+            this.exit.Text = "Выход";
+            this.exit.UseVisualStyleBackColor = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // ShowList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(588, 489);
+            this.Controls.Add(this.exit);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.doctorComboBox);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -323,9 +325,10 @@
             this.Text = "Список записанных пациентов";
             this.Load += new System.EventHandler(this.ShowList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKPatientDoctorBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKPatientDoctorBindingSource4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clinicDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKPatientDoctorBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKPatientDoctorBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKPatientDoctorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).EndInit();
@@ -337,7 +340,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.fKPatientCardBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKPatientCardBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKPatientCardBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKPatientDoctorBindingSource4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,7 +348,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
         private ClinicDataSet clinicDataSet;
         private System.Windows.Forms.BindingSource patientBindingSource;
         private ClinicDataSetTableAdapters.PatientTableAdapter patientTableAdapter;
@@ -377,5 +378,6 @@
         private System.Windows.Forms.BindingSource fKPatientCardBindingSource3;
         private System.Windows.Forms.BindingSource fKPatientDoctorBindingSource3;
         private System.Windows.Forms.BindingSource fKPatientDoctorBindingSource4;
+        private System.Windows.Forms.Button exit;
     }
 }

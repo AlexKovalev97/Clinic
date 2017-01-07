@@ -36,9 +36,9 @@
             System.Windows.Forms.Label label4;
             System.Windows.Forms.Label label3;
             System.Windows.Forms.Label label8;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegPatient));
             System.Windows.Forms.Label label9;
-            this.button1 = new System.Windows.Forms.Button();
+            System.Windows.Forms.Label label10;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegPatient));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.clinicDataSet = new АМИС_ПОЛИКЛИНИКА.ClinicDataSet();
@@ -76,6 +76,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.docidTextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cardidTextBox = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.exit = new System.Windows.Forms.Button();
             label7 = new System.Windows.Forms.Label();
             genderLabel = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
@@ -84,6 +87,7 @@
             label3 = new System.Windows.Forms.Label();
             label8 = new System.Windows.Forms.Label();
             label9 = new System.Windows.Forms.Label();
+            label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.clinicDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingNavigator)).BeginInit();
@@ -145,7 +149,7 @@
             label4.AutoSize = true;
             label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             label4.ForeColor = System.Drawing.Color.SeaGreen;
-            label4.Location = new System.Drawing.Point(12, 153);
+            label4.Location = new System.Drawing.Point(25, 190);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(186, 20);
             label4.TabIndex = 11;
@@ -167,33 +171,40 @@
             label8.AutoSize = true;
             label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             label8.ForeColor = System.Drawing.Color.SeaGreen;
-            label8.Location = new System.Drawing.Point(24, 475);
+            label8.Location = new System.Drawing.Point(4, 177);
             label8.Name = "label8";
             label8.Size = new System.Drawing.Size(413, 25);
             label8.TabIndex = 51;
             label8.Text = "Пациенты, закрепленные за участком:";
             // 
-            // button1
+            // label9
             // 
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(357, 661);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 38);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Выход";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            label9.AutoSize = true;
+            label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            label9.ForeColor = System.Drawing.Color.SeaGreen;
+            label9.Location = new System.Drawing.Point(25, 213);
+            label9.Name = "label9";
+            label9.Size = new System.Drawing.Size(212, 20);
+            label9.TabIndex = 49;
+            label9.Text = "id участкового врача:";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            label10.ForeColor = System.Drawing.Color.SeaGreen;
+            label10.Location = new System.Drawing.Point(25, 238);
+            label10.Name = "label10";
+            label10.Size = new System.Drawing.Size(94, 20);
+            label10.TabIndex = 51;
+            label10.Text = "№ карты:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label2.Location = new System.Drawing.Point(24, 300);
+            this.label2.Location = new System.Drawing.Point(17, 318);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 25);
             this.label2.TabIndex = 32;
@@ -259,7 +270,7 @@
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.patientBindingNavigatorSaveItem});
-            this.patientBindingNavigator.Location = new System.Drawing.Point(29, 246);
+            this.patientBindingNavigator.Location = new System.Drawing.Point(29, 262);
             this.patientBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.patientBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.patientBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -399,7 +410,7 @@
             // drDateTimePicker
             // 
             this.drDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.patientBindingSource, "dr", true));
-            this.drDateTimePicker.Location = new System.Drawing.Point(204, 151);
+            this.drDateTimePicker.Location = new System.Drawing.Point(206, 190);
             this.drDateTimePicker.Name = "drDateTimePicker";
             this.drDateTimePicker.Size = new System.Drawing.Size(200, 22);
             this.drDateTimePicker.TabIndex = 46;
@@ -456,7 +467,7 @@
             this.addrListListBox.DisplayMember = "fio";
             this.addrListListBox.FormattingEnabled = true;
             this.addrListListBox.ItemHeight = 16;
-            this.addrListListBox.Location = new System.Drawing.Point(39, 503);
+            this.addrListListBox.Location = new System.Drawing.Point(26, 205);
             this.addrListListBox.Name = "addrListListBox";
             this.addrListListBox.Size = new System.Drawing.Size(295, 100);
             this.addrListListBox.TabIndex = 46;
@@ -478,10 +489,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(label9);
-            this.panel1.Controls.Add(this.docidTextBox);
             this.panel1.Controls.Add(label3);
-            this.panel1.Controls.Add(label4);
             this.panel1.Controls.Add(this.genderTextBox);
             this.panel1.Controls.Add(label5);
             this.panel1.Controls.Add(label6);
@@ -489,52 +497,69 @@
             this.panel1.Controls.Add(label7);
             this.panel1.Controls.Add(this.dbDateTimePicker);
             this.panel1.Controls.Add(this.addressTextBox);
-            this.panel1.Controls.Add(this.drDateTimePicker);
             this.panel1.Controls.Add(this.idTextBox);
             this.panel1.Controls.Add(this.fioTextBox);
             this.panel1.Location = new System.Drawing.Point(12, 32);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(454, 211);
+            this.panel1.Size = new System.Drawing.Size(454, 153);
             this.panel1.TabIndex = 50;
             // 
             // docidTextBox
             // 
             this.docidTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "docid", true));
-            this.docidTextBox.Location = new System.Drawing.Point(230, 179);
+            this.docidTextBox.Location = new System.Drawing.Point(232, 213);
             this.docidTextBox.Name = "docidTextBox";
             this.docidTextBox.Size = new System.Drawing.Size(61, 22);
             this.docidTextBox.TabIndex = 48;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            label9.ForeColor = System.Drawing.Color.SeaGreen;
-            label9.Location = new System.Drawing.Point(12, 179);
-            label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(212, 20);
-            label9.TabIndex = 49;
-            label9.Text = "id участкового врача:";
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.addrListDataGridView);
-            this.panel2.Location = new System.Drawing.Point(12, 328);
+            this.panel2.Controls.Add(this.addrListListBox);
+            this.panel2.Controls.Add(label8);
+            this.panel2.Location = new System.Drawing.Point(12, 346);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(454, 317);
             this.panel2.TabIndex = 52;
+            // 
+            // cardidTextBox
+            // 
+            this.cardidTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.patientBindingSource, "cardid", true));
+            this.cardidTextBox.Location = new System.Drawing.Point(124, 238);
+            this.cardidTextBox.Name = "cardidTextBox";
+            this.cardidTextBox.Size = new System.Drawing.Size(61, 22);
+            this.cardidTextBox.TabIndex = 50;
+            // 
+            // exit
+            // 
+            this.exit.BackColor = System.Drawing.Color.SeaGreen;
+            this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.exit.ForeColor = System.Drawing.SystemColors.Window;
+            this.exit.Location = new System.Drawing.Point(367, 679);
+            this.exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(99, 38);
+            this.exit.TabIndex = 53;
+            this.exit.Text = "Выход";
+            this.exit.UseVisualStyleBackColor = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // RegPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(478, 710);
-            this.Controls.Add(label8);
+            this.ClientSize = new System.Drawing.Size(475, 728);
+            this.Controls.Add(this.exit);
+            this.Controls.Add(this.docidTextBox);
+            this.Controls.Add(label4);
+            this.Controls.Add(label9);
+            this.Controls.Add(this.cardidTextBox);
+            this.Controls.Add(label10);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.addrListListBox);
+            this.Controls.Add(this.drDateTimePicker);
             this.Controls.Add(this.patientBindingNavigator);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
@@ -556,14 +581,13 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private ClinicDataSet clinicDataSet;
@@ -601,5 +625,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox docidTextBox;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox cardidTextBox;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button exit;
     }
 }

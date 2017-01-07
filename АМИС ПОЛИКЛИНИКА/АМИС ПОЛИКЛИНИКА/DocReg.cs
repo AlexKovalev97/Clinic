@@ -15,11 +15,8 @@ namespace АМИС_ПОЛИКЛИНИКА
         public DocReg()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Close();
+            toolTip1.SetToolTip(exit, "Не забудьте сохранить изменения!");
+            toolTip1.IsBalloon = true;
         }
 
         private void doctorBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -37,11 +34,11 @@ namespace АМИС_ПОЛИКЛИНИКА
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+       
+
+        private void exit_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.doctorBindingSource.EndEdit();
-            this.doctorTableAdapter.Update(this.clinicDataSet.Doctor);
+            Close();
         }
     }
 }

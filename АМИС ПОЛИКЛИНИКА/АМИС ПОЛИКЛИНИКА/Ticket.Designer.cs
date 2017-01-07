@@ -35,32 +35,32 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.patientComboBox = new System.Windows.Forms.ComboBox();
+            this.fKPatientDoctorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.doctorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clinicDataSet = new АМИС_ПОЛИКЛИНИКА.ClinicDataSet();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.doctorComboBox = new System.Windows.Forms.ComboBox();
+            this.doctorComboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.clinicDataSet = new АМИС_ПОЛИКЛИНИКА.ClinicDataSet();
-            this.doctorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.doctorTableAdapter = new АМИС_ПОЛИКЛИНИКА.ClinicDataSetTableAdapters.DoctorTableAdapter();
             this.tableAdapterManager = new АМИС_ПОЛИКЛИНИКА.ClinicDataSetTableAdapters.TableAdapterManager();
-            this.doctorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.doctorComboBox1 = new System.Windows.Forms.ComboBox();
-            this.doctorComboBox = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.patientTableAdapter = new АМИС_ПОЛИКЛИНИКА.ClinicDataSetTableAdapters.PatientTableAdapter();
-            this.patientComboBox = new System.Windows.Forms.ComboBox();
-            this.fKPatientDoctorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.doctorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.print = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clinicDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKPatientDoctorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clinicDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKPatientDoctorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -81,6 +81,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(33, 27);
             this.textBox2.TabIndex = 57;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox2_keypress);
             // 
             // label7
             // 
@@ -115,21 +116,6 @@
             this.label4.Size = new System.Drawing.Size(197, 50);
             this.label4.TabIndex = 51;
             this.label4.Text = "   Талон   ";
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.SeaGreen;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.ForeColor = System.Drawing.SystemColors.Window;
-            this.button4.Location = new System.Drawing.Point(324, 323);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(116, 38);
-            this.button4.TabIndex = 50;
-            this.button4.Text = "Печать ";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label2
             // 
@@ -181,6 +167,65 @@
             this.panel1.Size = new System.Drawing.Size(484, 254);
             this.panel1.TabIndex = 59;
             // 
+            // patientComboBox
+            // 
+            this.patientComboBox.DataSource = this.fKPatientDoctorBindingSource;
+            this.patientComboBox.DisplayMember = "fio";
+            this.patientComboBox.FormattingEnabled = true;
+            this.patientComboBox.Location = new System.Drawing.Point(215, 12);
+            this.patientComboBox.Name = "patientComboBox";
+            this.patientComboBox.Size = new System.Drawing.Size(188, 24);
+            this.patientComboBox.TabIndex = 61;
+            this.patientComboBox.ValueMember = "id";
+            // 
+            // fKPatientDoctorBindingSource
+            // 
+            this.fKPatientDoctorBindingSource.DataMember = "FK_Patient_Doctor";
+            this.fKPatientDoctorBindingSource.DataSource = this.doctorBindingSource;
+            // 
+            // doctorBindingSource
+            // 
+            this.doctorBindingSource.DataMember = "Doctor";
+            this.doctorBindingSource.DataSource = this.clinicDataSet;
+            // 
+            // clinicDataSet
+            // 
+            this.clinicDataSet.DataSetName = "ClinicDataSet";
+            this.clinicDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.doctorBindingSource;
+            this.comboBox1.DisplayMember = "cab";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(170, 208);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(69, 24);
+            this.comboBox1.TabIndex = 61;
+            this.comboBox1.ValueMember = "id";
+            // 
+            // doctorComboBox
+            // 
+            this.doctorComboBox.DataSource = this.doctorBindingSource;
+            this.doctorComboBox.DisplayMember = "spec";
+            this.doctorComboBox.FormattingEnabled = true;
+            this.doctorComboBox.Location = new System.Drawing.Point(282, 91);
+            this.doctorComboBox.Name = "doctorComboBox";
+            this.doctorComboBox.Size = new System.Drawing.Size(188, 24);
+            this.doctorComboBox.TabIndex = 60;
+            this.doctorComboBox.ValueMember = "id";
+            // 
+            // doctorComboBox1
+            // 
+            this.doctorComboBox1.DataSource = this.doctorBindingSource;
+            this.doctorComboBox1.DisplayMember = "fio";
+            this.doctorComboBox1.FormattingEnabled = true;
+            this.doctorComboBox1.Location = new System.Drawing.Point(181, 52);
+            this.doctorComboBox1.Name = "doctorComboBox1";
+            this.doctorComboBox1.Size = new System.Drawing.Size(196, 24);
+            this.doctorComboBox1.TabIndex = 43;
+            this.doctorComboBox1.ValueMember = "id";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -208,16 +253,8 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(37, 27);
             this.textBox1.TabIndex = 43;
-            // 
-            // clinicDataSet
-            // 
-            this.clinicDataSet.DataSetName = "ClinicDataSet";
-            this.clinicDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // doctorBindingSource
-            // 
-            this.doctorBindingSource.DataMember = "Doctor";
-            this.doctorBindingSource.DataSource = this.clinicDataSet;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox1_keypress);
             // 
             // doctorTableAdapter
             // 
@@ -233,78 +270,44 @@
             this.tableAdapterManager.PatientTableAdapter = this.patientTableAdapter;
             this.tableAdapterManager.UpdateOrder = АМИС_ПОЛИКЛИНИКА.ClinicDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // patientTableAdapter
+            // 
+            this.patientTableAdapter.ClearBeforeFill = true;
+            // 
             // doctorBindingSource1
             // 
             this.doctorBindingSource1.DataMember = "Doctor";
             this.doctorBindingSource1.DataSource = this.clinicDataSet;
-            // 
-            // doctorComboBox1
-            // 
-            this.doctorComboBox1.DataSource = this.doctorBindingSource;
-            this.doctorComboBox1.DisplayMember = "fio";
-            this.doctorComboBox1.FormattingEnabled = true;
-            this.doctorComboBox1.Location = new System.Drawing.Point(181, 52);
-            this.doctorComboBox1.Name = "doctorComboBox1";
-            this.doctorComboBox1.Size = new System.Drawing.Size(196, 24);
-            this.doctorComboBox1.TabIndex = 43;
-            this.doctorComboBox1.ValueMember = "id";
-            // 
-            // doctorComboBox
-            // 
-            this.doctorComboBox.DataSource = this.doctorBindingSource;
-            this.doctorComboBox.DisplayMember = "fio";
-            this.doctorComboBox.FormattingEnabled = true;
-            this.doctorComboBox.Location = new System.Drawing.Point(282, 91);
-            this.doctorComboBox.Name = "doctorComboBox";
-            this.doctorComboBox.Size = new System.Drawing.Size(188, 24);
-            this.doctorComboBox.TabIndex = 60;
-            this.doctorComboBox.ValueMember = "id";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DataSource = this.doctorBindingSource;
-            this.comboBox1.DisplayMember = "fio";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(170, 208);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(69, 24);
-            this.comboBox1.TabIndex = 61;
-            this.comboBox1.ValueMember = "id";
             // 
             // patientBindingSource
             // 
             this.patientBindingSource.DataMember = "Patient";
             this.patientBindingSource.DataSource = this.clinicDataSet;
             // 
-            // patientTableAdapter
+            // print
             // 
-            this.patientTableAdapter.ClearBeforeFill = true;
-            // 
-            // patientComboBox
-            // 
-            this.patientComboBox.DataSource = this.fKPatientDoctorBindingSource;
-            this.patientComboBox.DisplayMember = "fio";
-            this.patientComboBox.FormattingEnabled = true;
-            this.patientComboBox.Location = new System.Drawing.Point(215, 12);
-            this.patientComboBox.Name = "patientComboBox";
-            this.patientComboBox.Size = new System.Drawing.Size(188, 24);
-            this.patientComboBox.TabIndex = 61;
-            this.patientComboBox.ValueMember = "id";
-            // 
-            // fKPatientDoctorBindingSource
-            // 
-            this.fKPatientDoctorBindingSource.DataMember = "FK_Patient_Doctor";
-            this.fKPatientDoctorBindingSource.DataSource = this.doctorBindingSource;
+            this.print.BackColor = System.Drawing.Color.SeaGreen;
+            this.print.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.print.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.print.ForeColor = System.Drawing.SystemColors.Window;
+            this.print.Location = new System.Drawing.Point(332, 329);
+            this.print.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.print.Name = "print";
+            this.print.Size = new System.Drawing.Size(116, 38);
+            this.print.TabIndex = 60;
+            this.print.Text = "Печать ";
+            this.print.UseVisualStyleBackColor = false;
+            this.print.Click += new System.EventHandler(this.print_Click);
             // 
             // Ticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(516, 378);
+            this.Controls.Add(this.print);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
@@ -317,11 +320,11 @@
             this.Load += new System.EventHandler(this.Ticket_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clinicDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKPatientDoctorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clinicDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKPatientDoctorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,7 +337,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
@@ -354,5 +356,6 @@
         private System.Windows.Forms.BindingSource patientBindingSource;
         private System.Windows.Forms.ComboBox patientComboBox;
         private System.Windows.Forms.BindingSource fKPatientDoctorBindingSource;
+        private System.Windows.Forms.Button print;
     }
 }

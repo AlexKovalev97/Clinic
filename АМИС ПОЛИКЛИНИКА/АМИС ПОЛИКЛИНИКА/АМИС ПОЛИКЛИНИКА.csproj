@@ -121,12 +121,6 @@
     <Compile Include="ShowList.Designer.cs">
       <DependentUpon>ShowList.cs</DependentUpon>
     </Compile>
-    <Compile Include="test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="test.Designer.cs">
-      <DependentUpon>test.cs</DependentUpon>
-    </Compile>
     <Compile Include="Ticket.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,9 +162,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ShowList.resx">
       <DependentUpon>ShowList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="test.resx">
-      <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ticket.resx">
       <DependentUpon>Ticket.cs</DependentUpon>
